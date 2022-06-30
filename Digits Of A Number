@@ -1,0 +1,35 @@
+/**
+ - Digits Of A Number
+    - 1. You've to display the digits of a number.
+    - 2. Take as input "n", the number for which digits have to be displayed.
+    - 3. Print the digits of the number line-wise.
+
+*/
+
+
+import java.util.*;
+
+public class Main {
+
+  public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    long n = scn.nextInt();
+    long rvn = 0;
+    long count=0;
+    while (n > 0) {
+      long r = n % 10;
+      rvn = rvn * 10 + r;
+      n = n / 10;
+      count++;
+    }
+    
+    while (count > 0) {
+      long r = rvn % 10;
+      System.out.println(r);
+      rvn = rvn / 10;
+      count--;
+    }
+
+
+  }
+}
